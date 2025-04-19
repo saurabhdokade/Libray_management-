@@ -10,7 +10,7 @@ connectDatabase();
 const server = http.createServer(app);
 
 server.listen(process.env.PORT, () => {
-  console.log(`Server is running on http://localhost:${process.env.PORT}`);
+  console.log(`Server is running on http://localhost:${process.env.PORT || 5000}`);
 });
 
 process.on("uncaughtException", (err) => {
